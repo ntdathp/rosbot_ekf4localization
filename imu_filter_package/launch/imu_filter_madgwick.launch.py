@@ -14,4 +14,17 @@ def generate_launch_description():
                 ('/imu/data_raw', '/camera/camera/imu')
             ]
         ),
+        Node(
+            package='imu_filter_package',
+            executable='imu',
+            name='imu',
+            output='screen',
+            parameters=[{'new_frame_id': 'base_imu'}] 
+        ),
+        Node(
+           package='tf2_ros',
+           executable='static_transform_publisher',
+           arguments=['0', '0', '0', '0', '0', '0', 'base_link', 'base_imu'],
+           output='screen'
+       )
     ])

@@ -21,6 +21,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'imu = imu_filter_package.imu:main',
         ],
     },
 )
