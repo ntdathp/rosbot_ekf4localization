@@ -8,7 +8,7 @@ class OdometryToPath(Node):
         super().__init__('odometry_to_path_node')
         self.subscription = self.create_subscription(
             Odometry,
-            '/odometry/filtered',
+            '/odom',
             self.odom_callback,
             10)
         self.path_publisher = self.create_publisher(Path, '/robot_path', 10)

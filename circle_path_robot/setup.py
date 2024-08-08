@@ -22,7 +22,10 @@ setup(
         'console_scripts': [
             'circle_path_node = circle_path_robot.circle_path_node:main',
             'square_path_node = circle_path_robot.square_path_node:main',
-            'odometry_to_path_node = circle_path_robot.odometry_to_path:main'
+            'odometry_to_path_node = circle_path_robot.odometry_to_path:main',
+            'circle_path_closed_loop_node = circle_path_robot.circle_path_closed_loop_node:main',
+            'minimal_publisher = circle_path_robot.minimal_publisher:main'
+
         ],
     },
 )

@@ -10,8 +10,8 @@ class CirclePath(Node):
         timer_period = 0.1  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
         self.angle = 0.0
-        self.radius = 1.0  # Bán kính của hình tròn (m)
-        self.speed = 0.2   # Tốc độ tuyến tính (m/s)
+        self.radius = 0.5  # Bán kính của hình tròn (m)
+        self.speed = 0.35   # Tốc độ tuyến tính (m/s)
         self.angular_speed = self.speed / self.radius  # Tốc độ góc (rad/s)
         self.total_angle = 2 * math.pi  # 360 độ
 
